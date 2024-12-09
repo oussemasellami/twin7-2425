@@ -1,18 +1,5 @@
-const User = require("../models/user");
-const Chat=require('../models/chat')
+const User = require("../models/product");
 
-
-
-async function addchat (data)  {
-  try {
-    //console.log("body" + req.body);
-    const chat = new Chat({msg:data.msg});
-    await chat.save();
-    //res.status(200).json(user);
-  } catch (err) {
-    console.log(err);
-  }
-}
 async function add (req, res)  {
     try {
       //console.log("body" + req.body);
@@ -81,4 +68,4 @@ async function add (req, res)  {
       console.log(err);
     }
   }
-  module.exports={add,showusers,showbyid,showuserbyname,showusersbyname,updateuser,deleteuser,addchat}
+  module.exports={add,showusers,showbyid,showuserbyname,showusersbyname,updateuser,deleteuser}
